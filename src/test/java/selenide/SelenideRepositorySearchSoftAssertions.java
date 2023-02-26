@@ -1,14 +1,8 @@
 package selenide;
 
-
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Sleeper;
-
-import static com.codeborne.selenide.Condition.tagName;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -33,7 +27,6 @@ public class SelenideRepositorySearchSoftAssertions {
         // На странице SoftAssertions, проверьте что внутри есть пример кода для JUnit5
         $$(".markdown-body ol li").last().shouldHave(text("JUnit5"));
         $(".markdown-body ol li:last-child").$("code").exists();
-
 
     }
 }
